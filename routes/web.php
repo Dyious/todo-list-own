@@ -22,3 +22,6 @@ Route::get('/login', function () {
     return view('page.login');
 });
 
+Route::get('/list', function () {
+    return view('page.todoList');
+});
