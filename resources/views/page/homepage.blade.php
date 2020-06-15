@@ -9,7 +9,7 @@
 @endsection
 
 @section('btn-group')
-    <a href="#" class="pr-2 reg-btn">Register</a>
+    <a href="{{route()}}" class="pr-2 reg-btn">Register</a>
     <a href="#" class="login-btn shadow ">Login</a>
 @endsection
 

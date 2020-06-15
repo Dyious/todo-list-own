@@ -1,48 +1,59 @@
-*{
+* {
     font-size: 24px !important;
     padding: 0;
     margin: 0;
 }
 
-header{
+header {
     border-bottom: white 0.1rem solid;
 }
-header>h1{
+
+header > h1 {
     padding: 0;
-    font-weight:bold ;
+    font-weight: bold;
     color: black !important;
 }
-section{
+
+section {
     min-height: 20rem;
 }
 
-a{
-    text-decoration:none !important;
+a {
+    text-decoration: none !important;
 }
 
-.text-small-tag{
-    font-size: 0.5rem!important;
+.text-small-tag {
+    font-size: 0.5rem !important;
     color: white;
 }
 
-.title-font{
-    font-size:  1.5rem !important;
+.title-font {
+    font-size: 1.5rem !important;
     font-weight: bold;
-    color: black!important;
+    color: black !important;
 }
 
-.bg-winnie{
+.bg-winnie {
     background-color: #ECD715 !important;
 }
 
-.bg-blue-deep{
+.bg-blue-deep {
     background-color: #1C456A !important;
 }
 
-.bg-green-light{
+.bg-green-light {
     background-color: #27822A !important;
 }
 
-.text-blue-deep{
-    background-color: #00507A !important;
+.height-1 {
+    height: 1.5rem !important;
+    line-height: 1rem !important;
+}
+
+.text-blue-deep {
+    color: #00507A !important;
+}
+
+.text-white {
+    color: white !important;
 }

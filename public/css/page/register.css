@@ -1,0 +1,13 @@
+
+.form-radius{
+    width: 100%;
+    height: 1rem !important;
+    margin: 0 auto;
+    border: none; /* <-- This thing here */
+    border-radius: 10px;
+}
+
+.form-radius:focus{
+    outline: none;
+    padding-left: 10px;
+}
