@@ -3,7 +3,7 @@
     color: white!important;
 }
 
-.login-btn{
+.link-login-btn{
     color: black !important;
     background-color: yellow;
     padding: 1px 5px 1px 5px;
@@ -11,7 +11,7 @@
     font-weight: bold;
 }
 
-.login-btn:hover{
+.link-login-btn:hover{
     background-color: darkorange;
     color: white !important;
 }
