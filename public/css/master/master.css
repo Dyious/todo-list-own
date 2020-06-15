@@ -1,0 +1,48 @@
+*{
+    font-size: 24px !important;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    border-bottom: white 0.1rem solid;
+}
+header>h1{
+    padding: 0;
+    font-weight:bold ;
+    color: black !important;
+}
+section{
+    min-height: 20rem;
+}
+
+a{
+    text-decoration:none !important;
+}
+
+.text-small-tag{
+    font-size: 0.5rem!important;
+    color: white;
+}
+
+.title-font{
+    font-size:  1.5rem !important;
+    font-weight: bold;
+    color: black!important;
+}
+
+.bg-winnie{
+    background-color: #ECD715 !important;
+}
+
+.bg-blue-deep{
+    background-color: #1C456A !important;
+}
+
+.bg-green-light{
+    background-color: #27822A !important;
+}
+
+.text-blue-deep{
+    background-color: #00507A !important;
+}
