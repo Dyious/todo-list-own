@@ -31,7 +31,7 @@ class ListController extends Controller
                 $frontData['todo']->push($item);
         }
 
-        return view('page.todoList', ['list' => $frontData]);
+        return view('page.todoList', $frontData);
     }
 
     public function store(Request $req)
@@ -52,6 +52,12 @@ class ListController extends Controller
     public function update(Request $req)
     {
         $this->todoList->where(['id' => $req->input('id')])->update(['item' => $req->input('item')]);
+        return response()->json(['status'=>'success'],200);
+    }
+
+    public function updateFinish(Request $req)
+    {
+        $this->todoList->where(['id'=>$req->input('id')])->update(['finish'=>$req->input('finish')]);
         return response()->json(['status'=>'success'],200);
     }
 

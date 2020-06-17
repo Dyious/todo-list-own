@@ -40,13 +40,19 @@ ul, li {
 }
 
 .text-bg-lightyellow {
-    background-color: lightyellow !important;
+    background-color: rgba(0,0,0,0);
     border: 0;
-    width: 100%;
+}
+.show-item-btn{
+    background-color: #ffffe0 !important;
+    transition: all 0.5s;
+}
+.show-item-btn:hover{
+    background-color: #1C456A!important;
+    color: white;
 }
 
-/*高度歸零*/
-.animate {
-    height: 0rem;
-    transition: height 1s;
+.show-item-delete{
+    height: 0;
+    transition: height 0.5s;
 }

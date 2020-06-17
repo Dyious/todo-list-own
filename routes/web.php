@@ -37,5 +37,6 @@ Route::group(['prefix' => '/'], function () {
 Route::group(['prefix' => 'list', 'middleware' => 'auth'], function () {
     Route::post('/create', 'ListController@store')->name('list.create');
     Route::patch('/update', 'ListController@update')->name('list.update');
+    Route::patch('/update/finish', 'ListController@updateFinish')->name('list.update.finish');
     Route::delete('/delete', 'ListController@destroy')->name('list.delete');
 });

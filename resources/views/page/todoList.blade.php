@@ -33,9 +33,10 @@
         </div>
         <input name="_method" type="hidden" value="PATCH">
         <ul id="todo_part" class="col mx-5 my-2 row text-center d-flex align-center justify-content-center">
-            @if(!$list['todo']->isEmpty())
-                @foreach($list['todo'] as $item)
-                    <li class="item-opm w-100 mb-3 row px-2" id="show-item-{{$item->id}}">
+            @if(!$todo->isEmpty())
+                @foreach($todo as $item)
+                    <li class="item-opm w-100 mb-3 row px-2 show-item-btn changeFinish" id="show-item-{{$item->id}}"
+                        data-item="{{$item->id}}">
                         <input type="text" class="col-10 form-list-part text-bg-lightyellow"
                                id="item_body_{{$item->id}}" value="{{$item->item}}" disabled/>
                         <div class="col-2 float-right">
@@ -53,9 +54,10 @@
         </ul>
 
         <ul id="finish_part" class="col mx-5 my-2 row text-center d-flex align-center justify-content-center hidden">
-            @if(!$list['finish']->isEmpty())
-                @foreach($list['finish'] as $item)
-                    <li class="item-opm w-100 mb-3 row px-2" id="show-item-{{$item->id}}">
+            @if(!$finish->isEmpty())
+                @foreach($finish as $item)
+                    <li class="item-opm w-100 mb-3 row px-2 bg-blue-deep text-white" id="show-item-{{$item->id}}"
+                        data-item="{{$item->id}}">
                         <input type="text" class="col-10 form-list-part text-bg-lightyellow"
                                id="item_body_{{$item->id}}" value="{{$item->item}}" disabled/>
                         <div class="col-2 float-right">
@@ -93,6 +95,10 @@
             $('.delete-btn').on('click', function () {
                 destroy($(this).data('id'));
             });
+
+            $('.changeFinish').on('click', function () {
+                moveOn($(this).data('item'));
+            })
         });
 
         function checkPart(id) {
@@ -135,8 +141,7 @@
         }
 
         function destroy(id) {
-            let body = document.getElementById('show-item-'+id);
-
+            let body = document.getElementById('show-item-' + id);
             $.ajax({
                 type: "DELETE",
                 url: '{{route('list.delete')}}',
@@ -149,6 +154,26 @@
                     console.log(data);
                 },
             });
+        }
+
+        function moveOn(id) {
+            let body = document.getElementById('show-item-' + id);
+            let finishPart = document.getElementById('finish_part');
+            if(confirm('確定完成了嗎?')){
+                $.ajax({
+                    type: "PATCH",
+                    url: '{{route('list.update.finish')}}',
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        'id': id,
+                        'finish': 1,
+                    },
+                    success: function (data) {
+                        finishPart.appendChild(body);
+                        console.log(data);
+                    },
+                });
+            }
         }
     </script>
 @endsection
