@@ -29,6 +29,8 @@ class AuthController extends Controller
     {
         if (Auth::attempt(['username' => $req->input('username'), 'password' => $req->input('password')])) {
             return redirect()->intended('/list');
+        }else{
+            return  redirect()->back()->withErrors('請輸入正確資料');
         }
     }
 

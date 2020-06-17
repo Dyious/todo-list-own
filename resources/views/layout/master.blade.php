@@ -11,6 +11,11 @@
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/master/master.css')}}">
+    <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
+{{--    --}}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
     @yield('css-part')
 </head>
 <body>
@@ -31,5 +36,6 @@
 <footer class="container bg-winnie text-right">
     <span class="text-small-tag">this is demo to rent house training work. This Web is design form yingLu Chen.</span>
 </footer>
+    @yield('jsInclude')
 </body>
 </html>

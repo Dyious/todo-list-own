@@ -45,6 +45,11 @@ a {
     background-color: #27822A !important;
 }
 
+.bg-white-light{
+    background-color: #faf2cc !important;
+;
+}
+
 .height-1 {
     height: 1.5rem !important;
     line-height: 1rem !important;
