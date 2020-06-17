@@ -41,7 +41,7 @@
             </div>
             <div class="form-group col-6">
                 <label for="gender">Gender</label>
-                <select name="gender" id="gender" class="form-radius">
+                <select name="gender" id="gender" class="form-radius pl-2">
                     <option value="man">男</option>
                     <option value="woman">女</option>
                 </select>
