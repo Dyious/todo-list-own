@@ -28,6 +28,7 @@ Route::group(['prefix' => '/'], function () {
             return view('page.login');
         })->name('login.show');
         Route::post('/login', 'AuthController@login')->name('login');
+        Route::get('/logout', 'AuthController@logout')->name('logout');
     });
     Route::get('/list', 'ListController@show')->name('todoList.show');
 });

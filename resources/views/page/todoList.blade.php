@@ -9,7 +9,7 @@
 @endsection
 
 @section('btn-group')
-    <a href="#" class="link-login-btn shadow ">Logout</a>
+    <a href="{{route('logout')}}" class="link-login-btn shadow ">Logout</a>
 @endsection
 
 @section('content')
