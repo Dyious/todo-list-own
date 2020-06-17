@@ -51,6 +51,6 @@ class AuthController extends Controller
         if ($createSuccess)
             return redirect()->to(route('login.show'));
         else
-            return redirect()->back();
+            return redirect()->back()->withInput($req->all());
     }
 }
