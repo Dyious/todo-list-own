@@ -14,6 +14,8 @@ class User extends Authenticatable
 
     protected $primaryKey = 'id';
 
+    protected $rememberTokenName  = false;
+
     /**
      * The attributes that are mass assignable.
      *
