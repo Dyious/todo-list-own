@@ -18,6 +18,7 @@ class ListCreate extends Migration
             $table->string('item');
             $table->date('start_date');
             $table->date('end_date');
+            $table->integer('who_create');
             $table->boolean('finish');
             $table->timestamps();
         });
