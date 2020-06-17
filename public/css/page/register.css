@@ -1,7 +1,7 @@
 
 .form-radius{
     width: 100%;
-    height: 1rem !important;
+    min-height: 1rem !important;
     margin: 0 auto;
     border: none; /* <-- This thing here */
     border-radius: 10px;

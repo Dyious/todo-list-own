@@ -13,34 +13,38 @@
 
 @section('content')
     <form action="{{route('register.create')}}" method="POST" >
+        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
         <div class="row mt-4 py-2 m-5">
             <div class="form-group col-6">
                 <label for="first-Name">First Name</label>
-                <input type="text" id="first-Name" class="form-radius"/>
+                <input type="text" id="first-Name" name="firstName" class="form-radius"/>
             </div>
             <div class="form-group col-6">
                 <label for="last-Name">Last Name</label>
-                <input type="text" id="last-Name" class="form-radius"/>
+                <input type="text" id="last-Name" name="lastName" class="form-radius"/>
             </div>
             <div class="form-group col-6">
                 <label for="username">Username</label>
-                <input type="text" id="username" class="form-radius"/>
+                <input type="text" id="username" name="username" class="form-radius"/>
             </div>
             <div class="form-group col-6">
                 <label for="email">Email</label>
-                <input type="text" id="email" class="form-radius"/>
+                <input type="text" id="email" name="email" class="form-radius"/>
             </div>
             <div class="form-group col-6">
                 <label for="password">Password</label>
-                <input type="text" id="password" class="form-radius"/>
+                <input type="password" id="password" name="password" class="form-radius"/>
             </div>
             <div class="form-group col-6">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="text" id="confirm-password" class="form-radius"/>
+                <input type="text" id="confirm-password" name="confirmPassword" class="form-radius"/>
             </div>
             <div class="form-group col-6">
                 <label for="gender">Gender</label>
-                <input type="text" id="gender" class="form-radius"/>
+                <select name="gender" id="gender" class="form-radius">
+                    <option value="man">男</option>
+                    <option value="woman">女</option>
+                </select>
             </div>
             <div class="col-12">&nbsp;</div>
             <div class="col-12 text-right">

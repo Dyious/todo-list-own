@@ -30,7 +30,7 @@
             <a href="">Todo</a>
             <a href="">Finish</a>
         </div>
-
+        <input name="_method" type="hidden" value="PATCH">
         <ul class="col mx-5 my-2 row text-center d-flex align-center justify-content-center">
             @foreach(range(1,10) as $item)
                 <li class="item-opm w-100 mb-3 row ">

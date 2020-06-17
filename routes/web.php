@@ -27,14 +27,15 @@ Route::group(['prefix' => '/'], function () {
         Route::get('/', function () {
             return view('page.login');
         })->name('login.show');
-        Route::post('/create', 'AuthController@login')->name('login.create');
+        Route::post('/login', 'AuthController@login')->name('login');
     });
+    Route::get('/list', 'ListController@show')->name('todoList.show');
 });
 
 
 Route::group(['prefix' => 'list', 'middleware' => 'auth'], function () {
-    Route::get('/', 'ListController@show')->name('todoList.show');
+
     Route::post('/create', 'ListController@store')->name('login.create');
-    Route::patch('/{id}/update', 'ListController@update')->name('login.create');
-    Route::delete('/delete', 'ListController@destroy')->name('login.creates');
+    Route::patch('/update', 'ListController@update')->name('login.update');
+    Route::delete('/delete', 'ListController@destroy')->name('login.delete');
 });
