@@ -12,13 +12,14 @@ class UserCreateOne extends Seeder
      */
     public function run()
     {
+        DB::table('user')->truncate();
         DB::table('user')->insert([
             'username' => 'test1',
             'first_name' => 'Chen',
             'last_name' => 'YingLu',
             'password' => Hash::make('123456'),
             'sex' => 'man',
-            'email' => bcrypt('secret'),
+            'email' => 'p123123123@gmail.com.tw',
         ]);
     }
 }

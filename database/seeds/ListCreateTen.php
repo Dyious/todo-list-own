@@ -12,7 +12,7 @@ class ListCreateTen extends Seeder
      */
     public function run()
     {
-
+        DB::table('todoinfo')->truncate();
         foreach (range(1,10) as $item){
             DB::table('todoinfo')->insert([
                 'item' => 'item123'.$item,
