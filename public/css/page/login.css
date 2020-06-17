@@ -1,0 +1,36 @@
+.login-btn{
+    color: white !important;
+    padding: 1px 5px 1px 5px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.login-btn:hover{
+    background-color: darkorange;
+    color: white !important;
+}
+
+.line-or{
+    position: absolute;
+    top: 55%;
+    width: 75%;
+    height: 1px;
+    border-top: solid white 1px;
+    z-index: 1;
+}
+
+.line-circle{
+    position: absolute;
+    z-index: 14;
+    background-color: white;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.line-or-text{
+    line-height: 1.5rem;
+    z-index: 15;
+    color: black;
+    font-size: 0.8rem!important;
+}

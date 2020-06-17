@@ -1,0 +1,41 @@
+.link-login-btn {
+    color: black !important;
+    background-color: yellow;
+    padding: 1px 5px 1px 5px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.link-login-btn:hover {
+    background-color: darkorange;
+    color: white !important;
+}
+
+.form-list-part-left {
+    border-radius: 15px 0 0 15px ;
+}
+
+.form-list-part {
+    border: 1px #faf2cc solid;
+    margin: 0;
+    height: 1.25rem;
+    padding-left: 0.8rem;
+}
+
+.form-list-part-right {
+    border-radius:  0  15px 15px 0 ;
+}
+
+.form-list-part:focus{
+    outline: none;
+}
+
+ul,li{
+    list-style: none;
+}
+
+.item-opm{
+    border-radius: 15px 15px 15px 15px;
+    border: 1px #faf2cc solid;
+    background-color: lightyellow;
+}

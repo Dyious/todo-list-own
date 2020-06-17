@@ -1,0 +1,21 @@
+.reg-btn{
+    font-size: 0.8rem !important;
+    color: white!important;
+}
+
+.link-login-btn{
+    color: black !important;
+    background-color: yellow;
+    padding: 1px 5px 1px 5px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.link-login-btn:hover{
+    background-color: darkorange;
+    color: white !important;
+}
+
+.rock-rotate{
+    transform: rotate(35deg) !important;
+}
