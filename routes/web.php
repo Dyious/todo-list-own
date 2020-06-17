@@ -11,17 +11,30 @@
 |
 */
 
-Route::get('/', function () {
-    return view('page.homepage');
-});
-Route::get('/register', function () {
-    return view('page.register');
+Route::group(['prefix' => '/'], function () {
+    Route::get('', function () {
+        return view('page.homepage');
+    })->name('homepage');
+
+    Route::group(['prefix' => 'register'], function () {
+        Route::get('/', function () {
+            return view('page.register');
+        })->name('register.show');
+        Route::post('/create', 'AuthController@register')->name('register.create');
+    });
+
+    Route::group(['prefix' => 'login'], function () {
+        Route::get('/', function () {
+            return view('page.login');
+        })->name('login.show');
+        Route::post('/create', 'AuthController@login')->name('login.create');
+    });
 });
 
-Route::get('/login', function () {
-    return view('page.login');
-});
 
-Route::get('/list', function () {
-    return view('page.todoList');
+Route::group(['prefix' => 'list', 'middleware' => 'auth'], function () {
+    Route::get('/', 'ListController@show')->name('todoList.show');
+    Route::post('/create', 'ListController@store')->name('login.create');
+    Route::patch('/{id}/update', 'ListController@update')->name('login.create');
+    Route::delete('/delete', 'ListController@destroy')->name('login.creates');
 });
